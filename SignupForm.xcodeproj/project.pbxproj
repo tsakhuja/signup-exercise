@@ -21,6 +21,8 @@
 		578BB8F81991501900ED3A91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578BB8DA1991501900ED3A91 /* UIKit.framework */; };
 		578BB9001991501900ED3A91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 578BB8FE1991501900ED3A91 /* InfoPlist.strings */; };
 		578BB9021991501900ED3A91 /* SignupFormTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 578BB9011991501900ED3A91 /* SignupFormTests.m */; };
+		578BB90D1991503F00ED3A91 /* KCAccountValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 578BB90C1991503F00ED3A91 /* KCAccountValidator.m */; };
+		578BB9101991505000ED3A91 /* KCAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 578BB90F1991505000ED3A91 /* KCAccountManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		578BB8FD1991501900ED3A91 /* SignupFormTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SignupFormTests-Info.plist"; sourceTree = "<group>"; };
 		578BB8FF1991501900ED3A91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		578BB9011991501900ED3A91 /* SignupFormTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupFormTests.m; sourceTree = "<group>"; };
+		578BB90B1991503F00ED3A91 /* KCAccountValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAccountValidator.h; sourceTree = "<group>"; };
+		578BB90C1991503F00ED3A91 /* KCAccountValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAccountValidator.m; sourceTree = "<group>"; };
+		578BB90E1991505000ED3A91 /* KCAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAccountManager.h; sourceTree = "<group>"; };
+		578BB90F1991505000ED3A91 /* KCAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAccountManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,10 @@
 				578BB8EC1991501900ED3A91 /* KCViewController.m */,
 				578BB8EE1991501900ED3A91 /* Images.xcassets */,
 				578BB8DD1991501900ED3A91 /* Supporting Files */,
+				578BB90B1991503F00ED3A91 /* KCAccountValidator.h */,
+				578BB90C1991503F00ED3A91 /* KCAccountValidator.m */,
+				578BB90E1991505000ED3A91 /* KCAccountManager.h */,
+				578BB90F1991505000ED3A91 /* KCAccountManager.m */,
 			);
 			path = SignupForm;
 			sourceTree = "<group>";
@@ -250,6 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				578BB9101991505000ED3A91 /* KCAccountManager.m in Sources */,
+				578BB90D1991503F00ED3A91 /* KCAccountValidator.m in Sources */,
 				578BB8ED1991501900ED3A91 /* KCViewController.m in Sources */,
 				578BB8E71991501900ED3A91 /* KCAppDelegate.m in Sources */,
 				578BB8E31991501900ED3A91 /* main.m in Sources */,
