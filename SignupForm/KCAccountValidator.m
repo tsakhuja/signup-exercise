@@ -16,7 +16,7 @@ static const NSInteger kMinUsernameLength = 2;
 static const NSInteger kMaxUsernameLength = 15;
 
 + (void)validateEmail:(NSString *)email callback:(void(^)(KCAccountErrorCode))callback   {
-  CGFloat delay = (CGFloat) rand() / RAND_MAX * 5;
+  CGFloat delay = (CGFloat) drand48() * 5.f;
   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     if (![self isEmailValid:email]) {
       callback(KCEmailFormatInvalidCode);
@@ -44,7 +44,7 @@ static const NSInteger kMaxUsernameLength = 15;
 }
 
 + (void)validateUsername:(NSString *)username callback:(void(^)(KCAccountErrorCode))callback {
-  CGFloat delay = (CGFloat) rand() / RAND_MAX * 5;
+  CGFloat delay = (CGFloat) drand48() * 5.f;
   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     if (username.length == 0) {
       callback(KCUsernameMissingCode);

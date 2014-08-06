@@ -14,7 +14,7 @@
                username:(NSString *)username
                password:(NSString *)password
                callback:(void (^)(KCAccountErrorCode errorCode))callback {
-  CGFloat delay = (CGFloat) rand() / RAND_MAX * 5;
+  CGFloat delay = (CGFloat) drand48() * 5.f;
   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     if ([email isEqualToString:@"tim@kamcord.com"]) {
       callback(KCEmailAlreadyExistsCode);
