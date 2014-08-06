@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Kamcord, Inc. All rights reserved.
 //
 
+#import "KCViewController.h"
 #import "KCAppDelegate.h"
 
 @implementation KCAppDelegate
@@ -13,7 +14,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    return YES;
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  UIViewController *rootController;
+  rootController = [[KCViewController alloc] initWithNibName:@"KCViewController" bundle:[NSBundle mainBundle]];
+
+  self.window.rootViewController = rootController;
+
+  [self.window makeKeyAndVisible];
+   return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5783E8901992BBEE002CE8C9 /* KCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5783E88F1992BBEE002CE8C9 /* KCViewController.xib */; };
 		578BB8D71991501900ED3A91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578BB8D61991501900ED3A91 /* Foundation.framework */; };
 		578BB8D91991501900ED3A91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578BB8D81991501900ED3A91 /* CoreGraphics.framework */; };
 		578BB8DB1991501900ED3A91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578BB8DA1991501900ED3A91 /* UIKit.framework */; };
 		578BB8E11991501900ED3A91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 578BB8DF1991501900ED3A91 /* InfoPlist.strings */; };
 		578BB8E31991501900ED3A91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 578BB8E21991501900ED3A91 /* main.m */; };
 		578BB8E71991501900ED3A91 /* KCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 578BB8E61991501900ED3A91 /* KCAppDelegate.m */; };
-		578BB8EA1991501900ED3A91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 578BB8E81991501900ED3A91 /* Main.storyboard */; };
 		578BB8ED1991501900ED3A91 /* KCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 578BB8EC1991501900ED3A91 /* KCViewController.m */; };
 		578BB8EF1991501900ED3A91 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578BB8EE1991501900ED3A91 /* Images.xcassets */; };
 		578BB8F61991501900ED3A91 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578BB8F51991501900ED3A91 /* XCTest.framework */; };
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5783E88F1992BBEE002CE8C9 /* KCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KCViewController.xib; sourceTree = "<group>"; };
 		578BB8D31991501900ED3A91 /* SignupForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignupForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		578BB8D61991501900ED3A91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		578BB8D81991501900ED3A91 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -46,7 +47,6 @@
 		578BB8E41991501900ED3A91 /* SignupForm-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SignupForm-Prefix.pch"; sourceTree = "<group>"; };
 		578BB8E51991501900ED3A91 /* KCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCAppDelegate.h; sourceTree = "<group>"; };
 		578BB8E61991501900ED3A91 /* KCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCAppDelegate.m; sourceTree = "<group>"; };
-		578BB8E91991501900ED3A91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		578BB8EB1991501900ED3A91 /* KCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCViewController.h; sourceTree = "<group>"; };
 		578BB8EC1991501900ED3A91 /* KCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCViewController.m; sourceTree = "<group>"; };
 		578BB8EE1991501900ED3A91 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -120,9 +120,9 @@
 			children = (
 				578BB8E51991501900ED3A91 /* KCAppDelegate.h */,
 				578BB8E61991501900ED3A91 /* KCAppDelegate.m */,
-				578BB8E81991501900ED3A91 /* Main.storyboard */,
 				578BB8EB1991501900ED3A91 /* KCViewController.h */,
 				578BB8EC1991501900ED3A91 /* KCViewController.m */,
+				5783E88F1992BBEE002CE8C9 /* KCViewController.xib */,
 				578BB8EE1991501900ED3A91 /* Images.xcassets */,
 				578BB8DD1991501900ED3A91 /* Supporting Files */,
 				578BB90B1991503F00ED3A91 /* KCAccountValidator.h */,
@@ -239,9 +239,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5783E8901992BBEE002CE8C9 /* KCViewController.xib in Resources */,
 				578BB8EF1991501900ED3A91 /* Images.xcassets in Resources */,
 				578BB8E11991501900ED3A91 /* InfoPlist.strings in Resources */,
-				578BB8EA1991501900ED3A91 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +293,6 @@
 				578BB8E01991501900ED3A91 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		578BB8E81991501900ED3A91 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				578BB8E91991501900ED3A91 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		578BB8FE1991501900ED3A91 /* InfoPlist.strings */ = {
@@ -469,6 +461,7 @@
 				578BB9071991501900ED3A91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		578BB9081991501900ED3A91 /* Build configuration list for PBXNativeTarget "SignupFormTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +470,7 @@
 				578BB90A1991501900ED3A91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
