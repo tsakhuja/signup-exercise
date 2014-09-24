@@ -52,6 +52,8 @@ static const NSInteger kMaxUsernameLength = 15;
       callback(KCUsernameTooShortCode);
     } else if (username.length > kMaxUsernameLength) {
       callback(KCUsernameTooLongCode);
+    } else {
+      callback(KCSuccessCode);
     }
   });
 }
