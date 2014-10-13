@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, KCAccountErrorCode) {
  * Validates an email address by verifying that the email is not already in use by a user and that
  * the email matches the form xxx@yyy.zzz.
  */
-+ (void)validateEmail:(NSString *)email callback:(void(^)(KCAccountErrorCode))callback;
++ (void)validateEmail:(NSString *)email callback:(void(^)(KCAccountErrorCode code))callback;
 
 + (KCAccountErrorCode)validatePassword:(NSString *)password;
 
@@ -50,6 +50,6 @@ typedef NS_ENUM(NSInteger, KCAccountErrorCode) {
  * Validates a username by verifying that the username is not already in use and is between 2 and
  * 15 characters in length.
  */
-+ (void)validateUsername:(NSString *)username callback:(void(^)(KCAccountErrorCode))callback;
++ (void)validateUsername:(NSString *)username callback:(void(^)(KCAccountErrorCode code))callback;
 
 @end
