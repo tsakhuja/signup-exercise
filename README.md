@@ -3,8 +3,8 @@
 Your task is to implement a signup form. The requirements are the following:
 
 * There are 3 required fields:
-  *username (2-15 characters)
-  *email (must be a valid email address of the form x@y.z and must not be tim@kamcord.com)
+  * username (2-15 characters)
+  * email (must be a valid email address of the form x@y.z and must not be tim@kamcord.com)
   * password (6-30 characters)
 * There is exactly one button on the form, which reads "Sign Up" and is initially disabled.
 * All fields must be valid before the signup button becomes enabled. The class
