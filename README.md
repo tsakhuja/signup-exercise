@@ -12,6 +12,6 @@ Your task is to implement a signup form. The requirements are the following:
   logic. Note that some validation methods are asynchronous.
 * Once all fields are valid, tapping the "Sign Up" button must dismiss the
   login view controller to reveal a simple view with a label that says "Hello,
-  <username>", where <username> is the username that was entered in the signup
+  `<username>`", where `<username>` is the username that was entered in the signup
   form.
 
