@@ -8,7 +8,7 @@ Your task is to implement a signup form. The requirements are the following:
   * password (6-30 characters)
 * There is exactly one button on the form, which reads "Sign Up" and is initially disabled.
 * All fields must be valid before the signup button becomes enabled. The class
-  The class KCAccountValidator is provided for you which handles all validation
+  The class `KCAccountValidator` is provided for you which handles all validation
   logic. Note that some validation methods are asynchronous.
 * Once all fields are valid, tapping the "Sign Up" button must dismiss the
   login view controller to reveal a simple view with a label that says "Hello,
