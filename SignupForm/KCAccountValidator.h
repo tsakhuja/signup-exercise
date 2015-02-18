@@ -16,31 +16,30 @@
  details.
  */
 
-typedef NS_ENUM(NSInteger, KCAccountErrorCode) {
-  KCSuccessCode = 0,
-  KCUsernameAlreadyExistsCode = 1,
-  KCUsernameTooShortCode = 2,
-  KCUsernameTooLongCode = 3,
-  KCUsernameMissingCode = 14,
-  KCEmailAlreadyExistsCode = 5,
-  KCEmailFormatInvalidCode = 6,
-  KCEmailTooLongCode = 7,
-  KCEmailMissingCode = 15,
-  KCPasswordTooShortCode = 8,
-  KCPasswordTooLongCode = 9,
-  KCPasswordMissingCode,
-  KCOldPasswordIncorrectCode = 10,
-  KCEmailOrUsernameDoesNotExist = 11,
-  KCPasswordInvalidCode = 12,
-  KCTooManyResetPasswordAttemptsCode = 13,
-  KCEmptyResponseCode = 16,
+typedef NS_ENUM(NSUInteger, KCAccountErrorCode) {
+  KCAccountErrorCodeSuccess = 0,
+  KCAccountErrorCodeUsernameExists,
+  KCAccountErrorCodeUsernameTooShort,
+  KCAccountErrorCodeUsernameTooLong,
+  KCAccountErrorCodeUsernameMissing,
+  KCAccountErrorCodeEmailExists,
+  KCAccountErrorCodeEmailFormatInvalid,
+  KCAccountErrorCodeEmailTooLong,
+  KCAccountErrorCodeEmailMissing,
+  KCAccountErrorCodePasswordTooShort,
+  KCAccountErrorCodePasswordTooLong,
+  KCAccountErrorCodePasswordMissing,
+  KCAccountErrorCodeOldPasswordIncorrect,
+  KCAccountErrorCodeEmailOrUsernameDoesNot,
+  KCAccountErrorCodePasswordInvalid,
+  KCAccountErrorCodeTooManyResetPasswordAttempts,
 };
 
 @interface KCAccountValidator : NSObject
 
 /**
  * Validates an email address by verifying that the email is not already in use by a user and that
- * the email matches the form xxx@yyy.zzz.
+ * the email matches the form xxx@yyy.zzz. Callback is executed on the main thread.
  */
 + (void)validateEmail:(NSString *)email callback:(void(^)(KCAccountErrorCode code))callback;
 
@@ -48,7 +47,7 @@ typedef NS_ENUM(NSInteger, KCAccountErrorCode) {
 
 /** 
  * Validates a username by verifying that the username is not already in use and is between 2 and
- * 15 characters in length.
+ * 15 characters in length. Callback is executed on the main thread.
  */
 + (void)validateUsername:(NSString *)username callback:(void(^)(KCAccountErrorCode code))callback;
 

@@ -17,11 +17,11 @@
   CGFloat delay = (CGFloat) drand48() * 5.f;
   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     if ([email isEqualToString:@"tim@kamcord.com"]) {
-      callback(KCEmailAlreadyExistsCode);
+      callback(KCAccountErrorCodeEmailExists);
     } else if ([username isEqualToString:@"tim"]) {
-      callback(KCUsernameAlreadyExistsCode);
+      callback(KCAccountErrorCodeUsernameExists);
     } else {
-      callback(KCSuccessCode);
+      callback(KCAccountErrorCodeSuccess);
     }
   });
 }

@@ -19,12 +19,12 @@ static const NSInteger kMaxUsernameLength = 15;
   CGFloat delay = (CGFloat) drand48() * 5.f;
   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     if (![self isEmailValid:email]) {
-      callback(KCEmailFormatInvalidCode);
+      callback(KCAccountErrorCodeEmailFormatInvalid);
     } else {
       if ([email isEqualToString:@"tim@kamcord.com"]) {
-        callback(KCEmailAlreadyExistsCode);
+        callback(KCAccountErrorCodeEmailExists);
       } else {
-        callback(KCSuccessCode);
+        callback(KCAccountErrorCodeSuccess);
       }
     }
   });
@@ -33,27 +33,27 @@ static const NSInteger kMaxUsernameLength = 15;
 + (KCAccountErrorCode)validatePassword:(NSString *)password {
   NSUInteger passwordLength = password.length;
   if (passwordLength == 0) {
-    return KCPasswordMissingCode;
+    return KCAccountErrorCodePasswordMissing;
   } else if (passwordLength < kMinPasswordLength) {
-    return KCPasswordTooShortCode;
+    return KCAccountErrorCodePasswordTooShort;
   } else if (passwordLength > kMaxPasswordLength){
-    return KCPasswordTooLongCode;
+    return KCAccountErrorCodePasswordTooLong;
   }
 
-  return KCSuccessCode;
+  return KCAccountErrorCodeSuccess;
 }
 
 + (void)validateUsername:(NSString *)username callback:(void(^)(KCAccountErrorCode code))callback {
   CGFloat delay = (CGFloat) drand48() * 5.f;
   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     if (username.length == 0) {
-      callback(KCUsernameMissingCode);
+      callback(KCAccountErrorCodeUsernameMissing);
     } else if (username.length < kMinUsernameLength) {
-      callback(KCUsernameTooShortCode);
+      callback(KCAccountErrorCodeUsernameTooShort);
     } else if (username.length > kMaxUsernameLength) {
-      callback(KCUsernameTooLongCode);
+      callback(KCAccountErrorCodeUsernameTooLong);
     } else {
-      callback(KCSuccessCode);
+      callback(KCAccountErrorCodeSuccess);
     }
   });
 }
